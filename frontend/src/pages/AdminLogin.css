@@ -1,0 +1,51 @@
+.admin-auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--super-dark);
+  background-image: radial-gradient(circle at 10% 20%, rgba(220, 38, 38, 0.05) 0%, transparent 20%), 
+                    radial-gradient(circle at 90% 80%, rgba(220, 38, 38, 0.05) 0%, transparent 20%);
+}
+
+.admin-auth-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.1);
+}
+
+.admin-logo-gradient {
+  background: linear-gradient(135deg, #ef4444, #991b1b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.btn-admin {
+  background: linear-gradient(135deg, #ef4444, #991b1b);
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-admin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
+}
+
+.auth-switch span {
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.auth-switch span:hover {
+  text-decoration: underline;
+}
