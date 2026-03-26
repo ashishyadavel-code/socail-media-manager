@@ -6,10 +6,12 @@ class Post(models.Model):
     image = models.ImageField(upload_to='posts/', blank=True, null=True)
     video = models.FileField(upload_to='posts/videos/', blank=True, null=True)
     caption = models.TextField(blank=True, null=True)
+    likes = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='liked_posts', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f'{self.user.username} - {self.created_at}'
+
 
 class Story(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='stories')

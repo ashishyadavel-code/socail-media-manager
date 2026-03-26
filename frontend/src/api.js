@@ -47,3 +47,7 @@ export const getMediaUrl = (path) => {
   if (path.startsWith('http')) return path;
   return `http://localhost:8000${path.startsWith('/') ? '' : '/'}${path}`;
 };
+
+export const deletePost = (postId) => api.delete(`/content/posts/${postId}/`);
+export const toggleLike = (postId) => api.post(`/content/posts/${postId}/toggle_like/`);
+export const addComment = (postId, content) => api.post(`/content/comments/`, { post: postId, content });
