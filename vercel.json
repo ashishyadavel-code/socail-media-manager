@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+<<<<<<< HEAD:backend/vercel.json
+      "src": "backend/manage.py",
+=======
+      "src": "backend/core/wsgi.py",
+>>>>>>> 7ee36d6 (fix: vercel config):vercel.json
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+<<<<<<< HEAD:backend/vercel.json
+      "dest": "backend/manage.py"
+=======
+      "dest": "backend/core/wsgi.py"
+>>>>>>> 7ee36d6 (fix: vercel config):vercel.json
+    }
+  ]
+}
